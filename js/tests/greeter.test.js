@@ -5,7 +5,6 @@ class MockSystemClock {
   constructor(date) {
     this.date = date
   }
-
   currentHour () {
     return this.date.getHours()
   }
