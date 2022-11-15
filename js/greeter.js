@@ -6,16 +6,16 @@ class SystemClock {
 }
 
 class Greeter {
-  constructor () {
-    this.clock = new SystemClock()
+  constructor (clock) {
+    this.clock = clock
   }
 
   greet () {
     const currentHour = this.clock.currentHour()
-    if (currentHour <= 6 && currentHour < 12) {
+    if (currentHour >= 6 && currentHour < 12) {
       return 'Good morning'
     }
-    if (currentHour >= 12 && currentHour <= 19) {
+    if (currentHour >= 12 && currentHour <= 20) {
       return 'Good afternoon'
     }
     if (currentHour > 20 || currentHour <= 6) {
@@ -24,4 +24,4 @@ class Greeter {
   }
 }
 
-module.exports = { Greeter }
+module.exports = { Greeter, SystemClock }

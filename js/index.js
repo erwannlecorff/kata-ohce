@@ -1,8 +1,8 @@
-const Greeter = require('./greeter').Greeter
+const { Greeter, SystemClock } = require('./greeter').Greeter
 const UI = require('./ui').UI
 
 const main = () => {
-  const greeter = new Greeter()
+  const greeter = new Greeter(new SystemClock())
   const greetings = greeter.greet()
   console.log(greetings)
 
